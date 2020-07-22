@@ -23,11 +23,6 @@ public class MainController {
         this.service = service;
     }
 
-    @GetMapping()
-    public String hi() {
-        return "hi";
-    }
-
     @GetMapping("/{value}")
     public String getMonthName(@PathVariable(name = "value") int value) {
         return service.getMonthName(value);
